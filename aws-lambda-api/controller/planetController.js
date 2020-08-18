@@ -111,7 +111,7 @@ module.exports.planetsCreateBD = (event, context, callback) => {
   
   const response = {
     statusCode: 200,
-    body: JSON.stringify(data)
+    body: JSON.stringify(body)
   };
   return callback(null, response)
 };
