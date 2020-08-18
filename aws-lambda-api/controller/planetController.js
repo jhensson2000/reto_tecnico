@@ -33,7 +33,7 @@ module.exports.planets = (event, context, callback) => {
     var planets_in_spanish={
       "cantidad": body.count,
       "siguiente": body.next,
-      "previous": body.previous,
+      "anterior": body.previous,
       "resultados": resultados
     }
     

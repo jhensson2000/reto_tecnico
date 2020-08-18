@@ -30,7 +30,7 @@ module.exports.films = (event, context, callback) => {
     var films_in_spanish={
       "cantidad": body.count,
       "siguiente": body.next,
-      "previous": body.previous,
+      "anterior": body.previous,
       "resultados": resultados
     }
     

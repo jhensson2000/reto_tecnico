@@ -31,7 +31,7 @@ module.exports.species = (event, context, callback) => {
     var species_in_spanish={
       "cantidad": body.count,
       "siguiente": body.next,
-      "previous": body.previous,
+      "anterior": body.previous,
       "resultados": resultados
     }
     

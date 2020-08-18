@@ -1,0 +1,300 @@
+{
+	"info": {
+		"_postman_id": "70f6a2ee-da01-4403-a206-2be1e06d468e",
+		"name": "RETO TECNICO",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Planetas",
+			"item": [
+				{
+					"name": "Obtener Planetas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://zg3107kl46.execute-api.us-east-2.amazonaws.com/dev/planets",
+							"protocol": "https",
+							"host": [
+								"zg3107kl46",
+								"execute-api",
+								"us-east-2",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"dev",
+								"planets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Planeta",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://zg3107kl46.execute-api.us-east-2.amazonaws.com/dev/planets/1",
+							"protocol": "https",
+							"host": [
+								"zg3107kl46",
+								"execute-api",
+								"us-east-2",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"dev",
+								"planets",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Planeta BD",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://zg3107kl46.execute-api.us-east-2.amazonaws.com/dev/planetsBD/f835ae70-e112-11ea-8288-b3a992a0ce45",
+							"protocol": "https",
+							"host": [
+								"zg3107kl46",
+								"execute-api",
+								"us-east-2",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"dev",
+								"planetsBD",
+								"f835ae70-e112-11ea-8288-b3a992a0ce45"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear Planeta BD",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Tatooine\",\r\n    \"periodo_rotacion\": \"23\",\r\n    \"periodo_orbital\": \"304\",\r\n    \"diametro\": \"10465\",\r\n    \"clima\": \"arid\",\r\n    \"gravedad\": \"1 standard\",\r\n    \"terreno\": \"desert\",\r\n    \"superficie_agua\": \"1\",\r\n    \"poblacion\": \"200000\",\r\n    \"residentes\": [\r\n        \"http://swapi.py4e.com/api/people/1/\",\r\n        \"http://swapi.py4e.com/api/people/2/\",\r\n        \"http://swapi.py4e.com/api/people/4/\",\r\n        \"http://swapi.py4e.com/api/people/6/\",\r\n        \"http://swapi.py4e.com/api/people/7/\",\r\n        \"http://swapi.py4e.com/api/people/8/\",\r\n        \"http://swapi.py4e.com/api/people/9/\",\r\n        \"http://swapi.py4e.com/api/people/11/\",\r\n        \"http://swapi.py4e.com/api/people/43/\",\r\n        \"http://swapi.py4e.com/api/people/62/\"\r\n    ],\r\n    \"peliculas\": [\r\n        \"http://swapi.py4e.com/api/films/1/\",\r\n        \"http://swapi.py4e.com/api/films/3/\",\r\n        \"http://swapi.py4e.com/api/films/4/\",\r\n        \"http://swapi.py4e.com/api/films/5/\",\r\n        \"http://swapi.py4e.com/api/films/6/\"\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://zg3107kl46.execute-api.us-east-2.amazonaws.com/dev/planetsBD",
+							"protocol": "https",
+							"host": [
+								"zg3107kl46",
+								"execute-api",
+								"us-east-2",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"dev",
+								"planetsBD"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Peliculas",
+			"item": [
+				{
+					"name": "Obtener peliculas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://zg3107kl46.execute-api.us-east-2.amazonaws.com/dev/films",
+							"protocol": "https",
+							"host": [
+								"zg3107kl46",
+								"execute-api",
+								"us-east-2",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"dev",
+								"films"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener pelicula",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://zg3107kl46.execute-api.us-east-2.amazonaws.com/dev/films/1",
+							"protocol": "https",
+							"host": [
+								"zg3107kl46",
+								"execute-api",
+								"us-east-2",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"dev",
+								"films",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "7db3b46d-174a-423b-8e32-c4839254c0f0",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "1e90df14-a985-402e-9e23-2e5fcd46af8f",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Personas",
+			"item": [
+				{
+					"name": "Obtener Personas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://zg3107kl46.execute-api.us-east-2.amazonaws.com/dev/people",
+							"protocol": "https",
+							"host": [
+								"zg3107kl46",
+								"execute-api",
+								"us-east-2",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"dev",
+								"people"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Persona",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://zg3107kl46.execute-api.us-east-2.amazonaws.com/dev/people/1",
+							"protocol": "https",
+							"host": [
+								"zg3107kl46",
+								"execute-api",
+								"us-east-2",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"dev",
+								"people",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Especies",
+			"item": [
+				{
+					"name": "Obtener Especie",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://zg3107kl46.execute-api.us-east-2.amazonaws.com/dev/species/1",
+							"protocol": "https",
+							"host": [
+								"zg3107kl46",
+								"execute-api",
+								"us-east-2",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"dev",
+								"species",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Especies",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://zg3107kl46.execute-api.us-east-2.amazonaws.com/dev/species",
+							"protocol": "https",
+							"host": [
+								"zg3107kl46",
+								"execute-api",
+								"us-east-2",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"dev",
+								"species"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
