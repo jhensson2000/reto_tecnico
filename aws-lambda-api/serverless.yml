@@ -32,26 +32,26 @@ functions:
           method: get
           path: /planets/{id}
   
-  planetsGetAllBD:
-    handler: controller/planetController.planetsGetAllBD
+  planetsBD:
+    handler: controller/planetController.planetsBD
     events:
       - http:
           method: get
-          path: /planetsGetAllBD
+          path: /planetsBD
 
-  planetsGetByIdBD:
-    handler: controller/planetController.planetsGetByIdBD
+  planetByIdBD:
+    handler: controller/planetController.planetByIdBD
     events:
       - http:
           method: get
-          path: /planetsGetByIdBD/{ID}
+          path: /planetsBD/{id}
   
   planetsCreateBD:
     handler: controller/planetController.planetsCreateBD
     events:
       - http:
           method: post
-          path: /planetsCreateBD
+          path: /planetsBD
   
   films:
     handler: controller/filmController.films
@@ -97,7 +97,7 @@ functions:
   
 
 custom:
-  tableName: starwars
+  tableName: planetas
 
 resources:
   Resources:

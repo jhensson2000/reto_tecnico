@@ -7,7 +7,7 @@ const Dynamo = {
         const params = {
             TableName,
             Key: {
-                ID,
+                ID: ID+""
             },
         };
 

@@ -4,6 +4,7 @@ const planetService = require('../service/planetService');
 const Dynamo = require('../common/Dynamo');
 const uuid = require('uuid');
 const util = require('../util/util');
+const config = require('../config/default');
 
 module.exports.planets = (event, context, callback) => {
   planetService.getPlanets().then(function(body){
@@ -87,7 +88,7 @@ module.exports.planetsCreateBD = (event, context, callback) => {
   const timestamp = new Date().getTime();
   const data = JSON.parse(event.body);
   
-  var tableName = "starwars"
+  var tableName = config.TABLE_PLANETS
   var body={
     "ID": uuid.v1(),
     "nombre": data.nombre,
@@ -116,8 +117,8 @@ module.exports.planetsCreateBD = (event, context, callback) => {
 };
   
 
-module.exports.planetsGetAllBD = (event, context, callback) => {
-  var tableName = "starwars"
+module.exports.planetsBD = (event, context, callback) => {
+  var tableName = config.TABLE_PLANETS
   var data = Dynamo.getAll(tableName);
   
   const response = {
@@ -128,14 +129,32 @@ module.exports.planetsGetAllBD = (event, context, callback) => {
 };
 
 
-module.exports.planetsGetByIdBD = (event, context, callback) => {
-  var ID = event.pathParameters.ID;
-  var tableName = "starwars"
-  var data = Dynamo.get(3, tableName);
+module.exports.planetByIdBD = async (event, context, callback) => {;
+  var id = event.pathParameters.id
+  var tableName = config.TABLE_PLANETS
+  const data = await Dynamo.get(id, tableName)
+
+  var planet={
+    "nombre": data.nombre,
+    "periodo_rotacion": data.periodo_rotacion,
+    "periodo_orbital": data.periodo_orbital,
+    "diametro": data.diametro,
+    "clima": data.clima,
+    "gravedad": data.gravedad,
+    "terreno": data.terreno,
+    "superficie_agua": data.superficie_agua,
+    "poblacion": data.poblacion,
+    "residentes": data.residentes,
+    "peliculas": data.peliculas,
+    "creado": data.creado,
+    "editado": data.editado
+  }
   
   const response = {
     statusCode: 200,
-    body: JSON.stringify({ID,data})
+    body: JSON.stringify(planet)
   };
   return callback(null, response)
+  
+  
 };
