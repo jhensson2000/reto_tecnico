@@ -1,0 +1,20 @@
+{
+  "name": "aws-lambda-api",
+  "version": "1.0.0",
+  "main": "handler.js",
+  "dependencies": {
+    "aws-sdk": "^2.315.0",
+    "request": "^2.88.2"
+  },
+  "scripts": {
+    "invoke": "sls invoke local -f hello",
+    "deploy": "sls deploy --stage api --verbose"
+  },
+  "keywords": [],
+  "author": "Jhenssson Ayma Flores",
+  "license": "ISC",
+  "devDependencies": {
+    "serverless-pseudo-parameters": "^2.5.0"
+  },
+  "description": ""
+}
